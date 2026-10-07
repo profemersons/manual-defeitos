@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08111f">
+  <title>Falhas de Hardware | Laboratório de Diagnóstico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#inicio"><span class="brand-mark">⌁</span><span><b>LAB.DIAG</b><small>Curso Técnico em Informática</small></span></a>
+  <nav>
+    <a href="#metodo">Método</a>
+    <a href="#sintomas">Sintomas</a>
+    <a href="#ferramentas">Ferramentas</a>
+    <a href="#simulador">Simulador</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+  <button id="themeBtn" class="icon-btn" aria-label="Alternar tema">☾</button>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">HARDWARE • DIAGNÓSTICO • MANUTENÇÃO</div>
+      <h1>Não troque a peça.<br><span>Descubra a causa.</span></h1>
+      <p class="hero-lead">Uma apostila interativa para aprender a investigar falhas de computadores como um técnico: observar, levantar hipóteses, testar, interpretar evidências, reparar e validar.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#metodo">Começar diagnóstico →</a>
+        <a class="btn ghost" href="#simulador">Entrar no laboratório</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>06</b><span>etapas do raciocínio</span></div>
+        <div><b>08</b><span>cenários de falha</span></div>
+        <div><b>01</b><span>regra central</span></div>
+      </div>
+    </div>
+    <div class="hero-console">
+      <div class="console-head"><span></span><span></span><span></span><label>diagnostico.log</label></div>
+      <div class="terminal">
+        <p><i>01</i> usuário: “meu PC não funciona”</p>
+        <p><i>02</i> técnico: <strong>qual é o sintoma observável?</strong></p>
+        <p><i>03</i> hipótese: alimentação / RAM / vídeo...</p>
+        <p><i>04</i> teste: <strong>o mais simples e seguro</strong></p>
+        <p><i>05</i> evidência: resultado altera a hipótese</p>
+        <p><i>06</i> decisão: reparar → validar → documentar</p>
+        <div class="cursor">▌</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section intro">
+  <div class="section-kicker">A IDEIA CENTRAL</div>
+  <h2>Diagnóstico não é adivinhação.</h2>
+  <p>O mesmo sintoma pode ter várias causas. Por isso, a pergunta profissional não é <strong>“qual peça eu troco?”</strong>, mas <strong>“qual hipótese explica esse sintoma e qual teste pode confirmar ou eliminar essa hipótese?”</strong></p>
+  <div class="rule-card">
+    <div class="rule-icon">⚡</div>
+    <div><strong>Sintoma → hipótese → teste → evidência → diagnóstico → intervenção → validação</strong><span>Se o reparo não resolveu, você não “perdeu”: o resultado também é informação.</span></div>
+  </div>
+</section>
+
+<section id="metodo" class="section">
+  <div class="section-kicker">01 / MÉTODO</div>
+  <h2>O jeito de pensar de um técnico</h2>
+  <p class="section-sub">Antes de abrir o gabinete, você já pode descobrir muita coisa.</p>
+  <div class="method-grid">
+    <article class="step-card"><span>01</span><h3>Entenda</h3><p>Transforme “não funciona” em um sintoma observável. Quando começou? Acontece sempre? O que mudou?</p></article>
+    <article class="step-card"><span>02</span><h3>Observe</h3><p>Energia, LEDs, bipes, imagem, ruídos, aquecimento, cabos, conectores e sinais físicos.</p></article>
+    <article class="step-card"><span>03</span><h3>Hipotetize</h3><p>Liste causas plausíveis. Não escolha uma peça antes de ter evidências.</p></article>
+    <article class="step-card"><span>04</span><h3>Teste</h3><p>Comece pelo teste mais simples, seguro, barato e reversível. Mude uma variável por vez.</p></article>
+    <article class="step-card"><span>05</span><h3>Interprete</h3><p>Todo resultado serve para eliminar ou fortalecer hipóteses. Um teste negativo também ensina.</p></article>
+    <article class="step-card"><span>06</span><h3>Resolva & valide</h3><p>Faça o reparo, reproduza a condição original e confirme que o problema realmente desapareceu.</p></article>
+  </div>
+  <div class="callout warning"><b>Regra de ouro</b><span>Quanto maior o custo ou o risco de uma intervenção, maior deve ser a qualidade das evidências.</span></div>
+</section>
+
+<section class="section contrast-section">
+  <div>
+    <div class="section-kicker">CAUSA ≠ SINTOMA ≠ SOLUÇÃO</div>
+    <h2>Não confunda o que você vê com o que aconteceu.</h2>
+  </div>
+  <div class="triad">
+    <div><small>SINTOMA</small><strong>“Liga, mas não aparece imagem.”</strong><p>É o que foi observado.</p></div>
+    <div><small>CAUSA</small><strong>RAM, cabo, monitor, GPU, placa-mãe...</strong><p>É o motivo que pode explicar o sintoma.</p></div>
+    <div><small>SOLUÇÃO</small><strong>Reconectar, configurar, reparar ou substituir.</strong><p>É a intervenção depois da investigação.</p></div>
+  </div>
+</section>
+
+<section id="sintomas" class="section">
+  <div class="section-kicker">02 / MAPA DE FALHAS</div>
+  <h2>Escolha o sintoma. Investigue a história.</h2>
+  <p class="section-sub">Cada cartão apresenta uma rota de investigação. Clique para abrir.</p>
+  <div id="symptomGrid" class="symptom-grid"></div>
+</section>
+
+<section id="ferramentas" class="section">
+  <div class="section-kicker">03 / FERRAMENTAS</div>
+  <h2>Ferramenta boa é a que responde uma pergunta.</h2>
+  <div class="tools-grid">
+    <article class="tool-card"><div class="tool-icon">🧰</div><h3>Peça conhecida como funcional</h3><p>Ajuda a comparar e isolar a origem de uma falha.</p><b>Pergunta:</b> “O problema acompanha a peça?</p></article>
+    <article class="tool-card"><div class="tool-icon">⚡</div><h3>Multímetro</h3><p>Usado para medições elétricas quando o procedimento é seguro e adequado.</p><b>Atenção:</b> função e escala corretas são obrigatórias.</article>
+    <article class="tool-card"><div class="tool-icon">🌡️</div><h3>Monitoramento</h3><p>Temperatura e comportamento sob carga ajudam a investigar falhas térmicas.</p><b>Compare:</b> componente + carga + ambiente + especificação.</article>
+    <article class="tool-card"><div class="tool-icon">💾</div><h3>Diagnóstico de armazenamento</h3><p>Observe reconhecimento, saúde, erros de leitura, desempenho e mensagens.</p><b>Prioridade:</b> proteger os dados quando há suspeita de falha física.</article>
+    <article class="tool-card"><div class="tool-icon">🧠</div><h3>Teste de memória</h3><p>Teste módulo, slot e combinação de módulos para descobrir onde a falha acompanha.</p><b>Princípio:</b> uma variável por vez.</article>
+    <article class="tool-card"><div class="tool-icon">📖</div><h3>Documentação</h3><p>Modelo da placa, fabricante, código e manual específico importam.</p><b>Nunca:</b> tratar tabela de internet como universal.</article>
+  </div>
+</section>
+
+<section class="section safety">
+  <div class="section-kicker">ANTES DE MEXER</div>
+  <h2>Segurança também faz parte do diagnóstico.</h2>
+  <div class="safety-grid">
+    <div><strong>🔌 Energia</strong><p>Desligue e desconecte a alimentação antes de abrir o equipamento.</p></div>
+    <div><strong>⚠️ Bateria</strong><p>Bateria estufada não deve ser perfurada, esmagada ou tratada como comum.</p></div>
+    <div><strong>🫳 ESD</strong><p>Evite descargas eletrostáticas e toque direto nos contatos.</p></div>
+    <div><strong>💾 Dados</strong><p>Antes de formatar, restaurar ou trocar armazenamento, considere o backup.</p></div>
+  </div>
+</section>
+
+<section id="simulador" class="section lab-section">
+  <div class="section-kicker">04 / LABORATÓRIO</div>
+  <h2>Simulador de diagnóstico</h2>
+  <p class="section-sub">Você recebeu um equipamento. Escolha o próximo passo mais inteligente.</p>
+  <div class="lab">
+    <div class="lab-top"><span class="status-dot"></span><span id="caseLabel">CASO 01</span><span id="caseProgress">1 / 5</span></div>
+    <div id="caseBox"></div>
+    <div id="choiceBox" class="choices"></div>
+    <div id="feedbackBox"></div>
+    <button id="nextCase" class="btn primary hidden">Próximo caso →</button>
+  </div>
+</section>
+
+<section id="quiz" class="section quiz-section">
+  <div class="section-kicker">05 / CHECKPOINT</div>
+  <h2>Teste seu raciocínio técnico</h2>
+  <p class="section-sub">5 questões. Não procure a resposta: pense como técnico.</p>
+  <div id="quizBox" class="quiz-box"></div>
+</section>
+
+<section class="section documentation">
+  <div class="section-kicker">06 / FECHAMENTO</div>
+  <h2>Um reparo só termina quando é validado.</h2>
+  <div class="doc-grid">
+    <div class="doc-flow">
+      <span>PROBLEMA</span><b>→</b><span>TESTE</span><b>→</b><span>CAUSA</span><b>→</b><span>REPARO</span><b>→</b><span>VALIDAÇÃO</span>
+    </div>
+    <div class="checklist">
+      <h3>Registro mínimo do atendimento</h3>
+      <label><input type="checkbox"> Sintoma relatado</label>
+      <label><input type="checkbox"> Condição encontrada</label>
+      <label><input type="checkbox"> Testes realizados</label>
+      <label><input type="checkbox"> Resultados</label>
+      <label><input type="checkbox"> Causa identificada</label>
+      <label><input type="checkbox"> Reparo executado</label>
+      <label><input type="checkbox"> Validação do problema original</label>
+    </div>
+  </div>
+  <div class="final-rule"><span>💡</span><p><strong>O técnico excelente não é quem troca peças mais rápido.</strong><br>É quem consegue explicar por que testou, o que descobriu, por que tomou uma decisão e como comprovou que resolveu.</p></div>
+</section>
+</main>
+
+<footer>
+  <div><b>LAB.DIAG</b> · Apostila interativa de Falhas de Hardware</div>
+  <span>Curso Técnico em Informática</span>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
